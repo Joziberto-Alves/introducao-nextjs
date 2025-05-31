@@ -15,17 +15,17 @@ export default function NavBar(){
                 height={40}
                 className=""
                 />
-                <span className="ml-2">Next App</span>
+                <span className="ml-2 dark:dark:text-gray-900">Next App</span>
             </div>
 
             <div className="flex space-x-6">
-                <a href="" className="text-lg font-medium hover:text-indigo-400">
+                <a href="" className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
                 Inicio
                 </a>
-                <a href="" className="text-lg font-medium hover:text-indigo-400">
+                <a href="" className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
                 Recursos
                 </a>
-                <a href="" className="text-lg font-medium hover:text-indigo-400">
+                <a href="" className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
                 contatos
                 </a>
             </div>
