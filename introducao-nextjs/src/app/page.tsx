@@ -1,10 +1,12 @@
 import NavBar from "@/componemtes/NavBar";
-import ServerClient from "./server-client/page";
+
+const link = [{href:'/', label:'Inicio'},{href:'/about', label:'Sobre nós'},{href:'/products', label:'Produtos'}]
 
 export default function Home() {
-  return (<div>
-    <NavBar/>
-    <ServerClient/>
-  </div>);
+  return(
+  <div>
+    <NavBar links = {link} />
+  </div>
+  );
 }
 

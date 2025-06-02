@@ -1,6 +1,12 @@
 import Image from "next/image";
-
-export default function NavBar(){
+interface NavBarProps {
+        links: {
+            label:string,
+            href:string
+        }[]
+    }
+export default function NavBar({links}: NavBarProps){
+    
     return(
     <div>
         <nav className="bg-amber-200 shadow-sm">
@@ -19,15 +25,23 @@ export default function NavBar(){
             </div>
 
             <div className="flex space-x-6">
-                <a href="" className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
-                Inicio
+                    {
+                    links.map((link, indice) => (
+                        <a 
+                        key={indice} 
+                        href= {link.href} 
+                        className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">{link.label}</a>
+                    ))
+                }
+                {/* <a href={links[0].href} className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
+                {links[0].label}
                 </a>
                 <a href="" className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
-                Recursos
+                {links.label}
                 </a>
                 <a href="" className="text-lg dark:text-gray-900 font-medium hover:text-indigo-400">
-                contatos
-                </a>
+                {links.label}
+                </a> */}
             </div>
             </div>
         </div>
