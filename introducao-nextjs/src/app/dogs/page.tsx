@@ -4,6 +4,7 @@
 'use client';
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 type DogImage = {
     message: string;
@@ -25,21 +26,21 @@ export default function DogsPage() {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
             <h1 className="text-3xl font-bold mb-4">Random Dog 🐶</h1>
-            <Image
-                src={dog.message}
-                alt="Random dog"
-                width={320}
-                height={320}
-                className="w-80 h-80 object-cover rounded-xl shadow-lg"
-                unoptimized
-            />
-
-            <button
+            {dog.message && (
+                <Image
+                    src={dog.message}
+                    alt="Random dog"
+                    width={320}
+                    height={320}
+                    className="w-80 h-80 object-cover rounded-xl shadow-lg mb-3.5"
+                    unoptimized
+                />
+            )}
+            <Button
                 onClick={fetchDog}
-                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
             >
                 Buscar outro cachorro
-            </button>
+            </Button>
         </div>
     );
 }
