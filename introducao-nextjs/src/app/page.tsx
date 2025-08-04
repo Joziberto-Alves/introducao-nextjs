@@ -24,7 +24,8 @@ export default function Home() {
             content="Tipagem estática para um código mais seguro."
             icon="🔒" />
     </div>
-    
+    <div className="flex justify-center">
+    </div>
   </div>
   );
 }
