@@ -1,4 +1,4 @@
-import ClientCounter from "@/componemtes/ClientCounter"
+import ClientCounter from "@/componentes/ClientCounter"
 
 export default function ServerExemple() {
     const data = 'Dados do banco de dados'

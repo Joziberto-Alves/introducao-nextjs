@@ -1,4 +1,4 @@
-import ThemeToggle from "@/componemtes/ThemeToggle";
+import ThemeToggle from "@/componentes/ThemeToggle";
 
 export default function ServerClient() {
     const now = new Date()

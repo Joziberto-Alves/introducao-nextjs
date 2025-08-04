@@ -1,5 +1,5 @@
-import NavBar from "@/componemtes/NavBar";
-import Cards from "@/componemtes/CreateCards";
+import NavBar from "@/componentes/NavBar";
+import Cards from "@/componentes/CreateCards";
 
 const link = [{href:'/', label:'Inicio'},{href:'/about', label:'Sobre nós'},{href:'/products', label:'Produtos'}]
 // const card = [{title:'Renderização Híbrida', content:'SSG, SSR, e ISR para otimizar performace e CEO.', imageURL:'🤡'}]
