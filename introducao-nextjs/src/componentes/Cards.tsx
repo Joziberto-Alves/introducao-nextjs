@@ -13,5 +13,6 @@ export default function Cards({title,description,imageUrl}:CardProps){
             <h3 className='text-center'>{description}</h3>
             <Image src={imageUrl} width={150} height={150} alt="imagem" className='rounded'/>
         </div>
+        
     )
 }
