@@ -2,17 +2,60 @@ import Button from "@/componentes/Button";
 import Cards from "@/componentes/Cards";
 
 
-export default function About(){
-    return(
-        <div>
+const content =
+    [
+        {
+            title: "the seven husbands of evelyn hugo",
+            description: "Hugo comes from a poor background, but marries the first of her many husbands in order to move to Hollywood and pursue her career.",
+            imageUrl: "https://m.media-amazon.com/images/I/81J0E3eq4PL._UF1000,1000_QL80_.jpg",
+            category: "Book",
+        },
+        {
+            title: "Spirited Away",
+            description: "'Spirited Away' is a critically acclaimed animated fantasy film by Hayao Miyazaki, where a young girl named Chihiro enters a magical world after her parents are transformed into pigs.",
+            imageUrl: "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_.jpg",
+            category: "Movie"
+        },
+        {
+            title: "the invisible life of addie larue",
+            description: "The story follows a young French woman in 1714 who makes a bargain with the Dark that makes her immortal, but curses her to be forgotten by everyone she meets.",
+            imageUrl: "https://m.media-amazon.com/images/I/91Ql48Y0mqL._UF1000,1000_QL80_.jpg",
+            category: "Book",
+        },
+        {
+            title: "the seven husbands of evelyn hugo",
+            description: "Hugo comes from a poor background, but marries the first of her many husbands in order to move to Hollywood and pursue her career.",
+            imageUrl: "https://m.media-amazon.com/images/I/81J0E3eq4PL._UF1000,1000_QL80_.jpg",
+            category: "Book",
+        },
+        {
+            title: "Spirited Away",
+            description: "'Spirited Away' is a critically acclaimed animated fantasy film by Hayao Miyazaki, where a young girl named Chihiro enters a magical world after her parents are transformed into pigs.",
+            imageUrl: "https://m.media-amazon.com/images/M/MV5BNTEyNmEwOWUtYzkyOC00ZTQ4LTllZmUtMjk0Y2YwOGUzYjRiXkEyXkFqcGc@._V1_.jpg",
+            category: "Movie"
+
+        },
+        {
+            title: "the invisible life of addie larue",
+            description: "The story follows a young French woman in 1714 who makes a bargain with the Dark that makes her immortal, but curses her to be forgotten by everyone she meets.",
+            imageUrl: "https://m.media-amazon.com/images/I/91Ql48Y0mqL._UF1000,1000_QL80_.jpg",
+            category: "Book",
+        }
+
+    ];
+
+
+export default function About() {
+    return (
+        <div className="w-full flex flex-col items-center">
             <h1>Sobre nós</h1>
             <p>Informações sobre a empresa</p>
-            <Button label="qwert"/>
-            <div className="flex flex-row gap-9 px-2.5 my-2">
-                <Cards title="what about you" description="this is just a test tou can came soon to see what i am bilding." imageUrl="data:image/png;base64,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"/>
-                <Cards title="what about you" description="this is just a test tou can came soon to see what i am bilding." imageUrl="data:image/png;base64,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"/>
-                <Cards title="what about meee" description="this is just a test tou can came soon to see what i am bilding." imageUrl="data:image/png;base64,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"/>
+            <Button label="qwert" />
+            <div className="flex flex-row flex-wrap gap-9 px-2.5 my-2 w-full justify-start max-w-7xl">
+                {content.map((card, index) => (
+                    <Cards key={index} {...card} />
+                ))}
             </div>
         </div>
-    )
+    );
 }
