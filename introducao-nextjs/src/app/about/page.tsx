@@ -1,5 +1,6 @@
 import Button from "@/componentes/Button";
 import Cards from "@/componentes/Cards";
+import Counter from "@/componentes/Counter";
 
 
 const content =
@@ -56,6 +57,7 @@ export default function About() {
                     <Cards key={index} {...card} />
                 ))}
             </div>
+            <Counter/>
         </div>
     );
 }
