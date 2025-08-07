@@ -1,3 +1,5 @@
+import LikeButton from "./LikeButton";
+
 type FormPost = {
     nome: string;
     mensagem: string;
@@ -13,6 +15,9 @@ export default function Comment({ nome, mensagem, time }: FormPost) {
             <span className="text-gray-400 text-xs">{time}</span>
             </div>
             <p className="text-white text-base whitespace-pre-line break-words">{mensagem}</p>
+            <div className="flex justify-end mt-4">
+                <LikeButton />
+            </div>
         </div>
         </div>
     );
