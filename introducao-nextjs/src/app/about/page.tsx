@@ -1,6 +1,7 @@
 import Button from "@/componentes/Button";
 import Cards from "@/componentes/Cards";
 import Counter from "@/componentes/Counter";
+import LikeButton from "@/componentes/LikeButton";
 
 
 const content =
@@ -58,6 +59,7 @@ export default function About() {
                 ))}
             </div>
             <Counter/>
+            <LikeButton/>
         </div>
     );
 }
