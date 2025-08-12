@@ -1,7 +1,9 @@
 import Button from "@/componentes/Button";
 import Cards from "@/componentes/Cards";
 import Counter from "@/componentes/Counter";
+import EffectCounter from "@/componentes/EffectCouter";
 import LikeButton from "@/componentes/LikeButton";
+import MiniDisplay from "@/componentes/MiniDisplay";
 
 
 const content =
@@ -60,6 +62,7 @@ export default function About() {
             </div>
             <Counter/>
             <LikeButton/>
+            <EffectCounter/>
         </div>
     );
 }
