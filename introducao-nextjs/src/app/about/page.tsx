@@ -1,3 +1,4 @@
+import BotaoReproducao from "@/componentes/BotaoReproducao";
 import Button from "@/componentes/Button";
 import Cards from "@/componentes/Cards";
 import Counter from "@/componentes/Counter";
@@ -61,6 +62,7 @@ export default function About() {
             <Counter/>
             <LikeButton/>
             <EffectCounter/>
+            <BotaoReproducao/>
         </div>
     );
 }

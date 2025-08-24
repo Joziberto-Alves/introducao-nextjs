@@ -8,6 +8,24 @@ export default function MiniDisplay() {
     const [display, setDisplay] = useState('')
     // const []
 
+    const handleOperatorClick = (operator: string) => {
+    //Não deixo o user digitar um operador diferente
+    // do primeiro operador que ele digitou
+    const operators = ["+", "-", "*", "/"]
+
+    const disableOperators = operators.filter((op) => op !== operator)
+    // disableOperators = ["-", "*", "/"]
+
+    // Se a tela já tem um operador diferente, não faz nada
+    const hasAnotherOperator = disableOperators.some(
+      (op) => display.includes(op)
+    )
+    if(hasAnotherOperator) return
+
+    setDisplay(display + operator)
+
+  }
+
     const backspace = () => {
         setDisplay(display.slice(0,-1))
     }
@@ -20,7 +38,7 @@ export default function MiniDisplay() {
         if (display.includes('+')){
             soma()
         }
-        else if(display.includes('+')){
+        else if(display.includes('-')){
             subt()
         }
         else if(display.includes('*')){
@@ -146,12 +164,12 @@ export default function MiniDisplay() {
                 className="bg-gray-300 rounded p-2">8</button>
                 <button 
                 onClick={()=>{
-                    setDisplay(display+'/')
+                    handleOperatorClick("/")
                 }}
                 className="bg-gray-300 rounded p-1 text-2xl">/</button>
                 <button 
                 onClick={()=>{
-                    setDisplay(display+'*')
+                    handleOperatorClick("*")
                 }}
                 className="bg-gray-300 rounded p-1 text-xl">X</button>
                 <button 
@@ -162,12 +180,12 @@ export default function MiniDisplay() {
                 
                 <button 
                 onClick={()=>{
-                    setDisplay(display+'-')
+                    handleOperatorClick("-")
                 }}
                 className="bg-gray-300 rounded p-1 text-2xl">-</button> 
                 <button 
                 onClick={()=>{
-                    setDisplay(display+'+')
+                    handleOperatorClick("+")
                 }}
                 className="bg-gray-300 rounded p-1 text-2xl">+</button>
                 
